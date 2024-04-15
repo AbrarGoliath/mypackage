@@ -12,6 +12,5 @@ def tp_n (items, n):
         >>> top_n([8,3,2,7,4]),3) == [8,7,3]
 
     """
-
-    sorted_items = sorted(items, key=lambda x:x, reversed=False)
-    return sorted[-n:]
+    sorted_items = sorted(items, key=lambda x:x, reverse=True)
+    return sorted_items[:n]
